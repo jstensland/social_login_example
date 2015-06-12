@@ -1,12 +1,10 @@
-#
-# Ruby Helper Class for Janrain Engage
-#
 require 'rubygems'
 require 'cgi'
 require 'uri'
 require 'net/http'
 require 'net/https'
 require 'json'
+
 module Rpx
   class RpxException < StandardError
     attr_reader :http_response
@@ -70,6 +68,7 @@ module Rpx
           raise RpxException.new(resp), 'Unable to parse JSON response'
         end
       else
+        Rails.logger.debug "the url path is #{url.path} and the data sent is #{data} and url is #{url}"
         fail RpxException.new(resp), "Unexpected HTTP status code from server: #{resp.code}"
       end
       if data['stat'] != 'ok'

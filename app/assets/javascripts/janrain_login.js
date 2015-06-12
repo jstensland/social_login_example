@@ -2,7 +2,7 @@
     if (typeof window.janrain !== 'object') window.janrain = {};
     if (typeof window.janrain.settings !== 'object') window.janrain.settings = {};
 
-    janrain.settings.tokenUrl = 'https://mighty-wave-4504.herokuapp.com/static_pages/about';
+    janrain.settings.tokenUrl = 'http://localhost:3000/engage_janrain_callback';
 
     function isReady() { janrain.ready = true; }
     if (document.addEventListener) {
