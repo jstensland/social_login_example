@@ -9,7 +9,7 @@ janrain.settings.appUrl = 'https://social-login-example.rpxnow.com';
 janrain.settings.social = {
    providers: [
        "facebook",
-       "twitter",
+       "email-google",
        "native-facebook",
        "native-googleplus"
    ],
